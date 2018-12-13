@@ -16,7 +16,6 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(box2d REQUIRED box2d)
 pkg_check_modules(glfw3 REQUIRED glfw3)
 pkg_check_modules(glew REQUIRED glew)
-pkg_check_modules(glfw3 CONFIG REQUIRED)
 
 set(
     LIBS 
