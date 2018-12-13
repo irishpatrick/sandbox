@@ -17,9 +17,19 @@ void Context::init()
 
     }
 
+	const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+	glfwWindowHint(GLFW_RED_BITS, mode->redBits);
+	glfwWindowHint(GLFW_GREEN_BITS, mode->greenBits);
+	glfwWindowHint(GLFW_BLUE_BITS, mode->blueBits);
+	glfwWindowHint(GLFW_REFRESH_RATE, mode->refreshRate);
+
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
-    window = glfwCreateWindow(640, 480, "Title", NULL, NULL);
+    window = glfwCreateWindow(
+		mode->width, mode->height, 
+		"Title", 
+		glfwGetPrimaryMonitor(), NULL
+	);
     if (!window)
     {
         

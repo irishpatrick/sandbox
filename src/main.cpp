@@ -37,7 +37,7 @@ void init()
     glfwSetKeyCallback(ctx.getWindow(), key_callback);
 
     shader.loadShader(fs::path(fs::current_path() / "assets" / "vertex.glsl").generic_string(), GL_VERTEX_SHADER);
-    shader.loadShader(fs::path(fs::current_path() / "assets" / "fragment.glsl"), GL_FRAGMENT_SHADER);
+    shader.loadShader(fs::path(fs::current_path() / "assets" / "fragment.glsl").generic_string(), GL_FRAGMENT_SHADER);
     shader.linkProgram();
 
     t.init();
