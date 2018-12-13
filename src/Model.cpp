@@ -24,7 +24,26 @@ void Model::update()
 {
 	translationMatrix = glm::translate(glm::mat4(1.0f), position);
 	scaleMatrix = glm::scale(glm::mat4(1.0f), scale);
-	matrix = translationMatrix * scaleMatrix;
+
+	glm::mat4 xrot = glm::rotate(
+		glm::radians(rotation.x),
+		glm::vec3(1.0f, 0.0f, 0.0f)
+	);
+
+	glm::mat4 yrot = glm::rotate(
+		glm::radians(rotation.y),
+		glm::vec3(0.0f, 1.0f, 0.0f)
+	);
+
+	glm::mat4 zrot = glm::rotate(
+		glm::radians(rotation.z),
+		glm::vec3(0.0f, 1.0f, 0.0f)
+	);
+
+	rotationMatrix = xrot * yrot * zrot;
+	matrix = translationMatrix * rotationMatrix * scaleMatrix;
+
+
 }
 
 void Model::init()

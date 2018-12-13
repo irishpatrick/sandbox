@@ -44,11 +44,12 @@ void init()
 
     camera.setProjection(70.0f, 640.0f/480.0f, 0.1f, 100.0f);
     //camera.lookAt(4.0f, 3.0f, 4.0f);
-    camera.position.z = -0.7f;
+    camera.position.z = -2.0f;
 }
 
 void update()
 {
+    t.rotation.y += 0.5f;
     camera.update();
     t.update();
 }
