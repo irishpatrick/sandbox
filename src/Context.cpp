@@ -25,6 +25,7 @@ void Context::init()
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
+	glfwWindowHint(GLFW_SAMPLES, 4);
     window = glfwCreateWindow(
 		mode->width, mode->height, 
 		"Title", 
