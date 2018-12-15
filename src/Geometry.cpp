@@ -11,7 +11,12 @@ Geometry::~Geometry()
 
 }
 
-bool Geometry::init()
+void Geometry::init()
+{
+
+}
+
+bool Geometry::genBuffers()
 {
 	if (vertices.size() == 0)
 	{
@@ -34,4 +39,9 @@ bool Geometry::init()
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 	return true;
+}
+
+std::vector<GLfloat>& Geometry::getVertices() 
+{
+	return vertices;
 }

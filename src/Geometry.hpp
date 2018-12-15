@@ -13,7 +13,10 @@ public:
 	Geometry();
 	~Geometry();
 
-	bool init();
+	void init();
+	bool genBuffers();
+
+	std::vector<GLfloat>& getVertices();
 
 protected:
 	GLuint vbo[1];
