@@ -21,7 +21,7 @@ public:
 protected:
 	GLuint vbo[1];
 	GLuint vao[1];
-	const GLuint positionAttributeIndex = 0;
+	GLuint positionAttributeIndex = 0;
 	std::vector<GLfloat> vertices;
 
 };

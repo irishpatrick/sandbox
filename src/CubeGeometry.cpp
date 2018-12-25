@@ -3,7 +3,7 @@
 
 static const GLfloat layout[24] =
 {
-	1.0f, -1.f, -1.0f,
+	1.0f, -1.0f, -1.0f,
 	1.0f, -1.0f, 1.0f,
 	-1.0f, -1.0f, 1.0f,
 	-1.0f, -1.0f, -1.0f,
