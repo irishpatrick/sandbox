@@ -33,6 +33,7 @@ if (${PKG_MANAGER} STREQUAL "vcpkg")
 find_package(unofficial-box2d CONFIG REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
+find_package(glm CONFIG REQUIRED)
 
 set(
     LIBS
@@ -40,6 +41,7 @@ set(
     GLEW::GLEW
     glfw
     unofficial::box2d::Box2D
+	glm
 )
 
 
